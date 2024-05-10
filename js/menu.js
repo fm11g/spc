@@ -16,7 +16,7 @@ menu.innerHTML = `
     
     <div class="menu-btn">
         <!-- <button class="Event_Menu">Event</button> -->
-       <button class="total_menu"><img src="img/hamburger.svg" style="width:17px"></button>
+      <!-- <button class="total_menu"><img src="img/hamburger.svg" style="width:17px"></button> -->
     </div>
 </nav>
 
