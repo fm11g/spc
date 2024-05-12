@@ -116,7 +116,7 @@
            
             <div class="title" style="margin-bottom:40px;">
                 <br><br>
-                <a href="#sec05" class="scroll box" style="display:none;">
+                <!-- <a href="#sec05" class="scroll box" style="display:none;">
                     
                     <span class="timer">
                         접수마감 | <script language="javascript" type="text/javascript">
@@ -124,7 +124,7 @@
                             document.write(today.getFullYear(),".",today.getMonth()+1,".",today.getDate()) 
                         </script> ( <span id="countdown"></span>)
                     </span>
-                </a> <br><br>
+                </a> <br><br> -->
                 <!-- <img src="./img/gov.png" style="width:150px"> -->
                 <p class="top wow fadeInUp">신청이 완료되었습니다.<br></p><br>
                 <h1 class="wow fadeInUp">최대한 빠르게<br>전화로 혜택 안내 드리겠습니다.<br><br>토요일, 일요일, 공휴일 신청시<br>평일 날 안내드립니다.<br><br></h1>
@@ -148,17 +148,66 @@
     <!-- contents -->
     <div class="contentsWrap">
 
-        
-       
-        <div class="intro-blank wow fadeInLeft" style="width:100%;">
-            <a href="https://korea-license.co.kr"><div class="box-img"><img src="./img/004.png" class="br50"></div>
-              <div class="box-copy">
-                <strong><br>대기업, 공기업 스펙 가능<br>국가자격증 교육비 지원</strong>
-                <span style="color:#e5e5e5;font-size:17px;">농번기 시즌 연봉 수입 가능<br>정년 없는 N잡 전문직<br>[국가공인자격증]</span><br><br><br>
+        <style>
+            #other_tit{
+                font-size:40px;
+            }
+            @media screen and (max-width:450px) {
              
-                <a class="intro-link" href="https://korea-license.co.kr">더 알아보기 ></a>
-              </div>
-            </a>
+                #other_tit{
+                font-size:20px;
+            }
+
+            }
+        </style>
+
+       <h1 id="other_tit" style="margin-left:3%;">신청한 분들이 살펴본<br>국가 자격증 취업지원 이벤트</h1>
+       
+        <div class="intro-blank wow fadeInLeft">
+            <a href="https://korea-license.co.kr/kl-c.html"><div class="box-img"><img src="./img/003.png" class="br50"></div>
+                <div class="box-copy">
+                    <strong><br>농산물품질관리사</strong>
+            <span style="color:#e5e5e5;font-size:17px;">인력 부족으로 인한 높은 취업률</span><br><br><br>
+            <span class="timer" style="color:#fff;font-weight:bold;">
+              신청 마감 | <span id="day" style="font-weight:bold;"></span> ( <span id="countdown" style="font-weight:bold;"></span>)
+              </span>
+            </a> <br><br><br>
+                    <a class="intro-link" href="https://korea-license.co.kr/kl-c.html">더 알아보기 ></a>
+                </div>
+        </a>
+            </div>
+    
+        <div class="intro-blank wow fadeInLeft">
+          <a href="https://korea-license.co.kr/kl-b.html"><div class="box-img"><img src="./img/001.png" class="br50"></div>
+            <div class="box-copy">
+              <strong><br>도로교통사고감정사</strong>
+              <span style="color:#e5e5e5;font-size:17px;">인력 부족으로 인한 높은 취업률<br>[경찰 공무원 가산점]<br>[국가공인자격증]</span><br><br><br>
+              <!-- <span class="timer" style="color:#fff;font-weight:bold;">
+                신청 마감 | <span id="day1" style="font-weight:bold;"></span> ( <span id="countdown1" style="font-weight:bold;"></span>)
+                </span> -->
+              </a> <br>
+              <a class="intro-link" href="https://korea-license.co.kr/kl-b.html">더 알아보기 ></a>
+            </div>
+          </a>
+          </div>
+    
+        <div class="intro-blank col-md-6 col-lg-6 col-xs-12 wow fadeInLeft" style="float:left">
+                <a href="https://korea-license.co.kr/kl-f.html"><div class="box-img"><img src="./img/sports.png" class="br50"></div>
+                <div class="box-copy">
+                    <strong><br>노인스포츠지도사</strong>
+            <span style="color:#e5e5e5;font-size:17px;">고령화 시대 맞춤 자격증</span><br><br><br>
+                    <a class="intro-link" href="https://korea-license.co.kr/kl-f.html">더 알아보기 ></a>
+                </div>
+        </a>
+            </div> 
+         <div class="intro-blank col-md-6 col-lg-6 col-xs-12 wow fadeInLeft">
+                <a href="https://korea-license.co.kr/kl-d.html"><div class="box-img"><img src="./img/puppy.png" class="br50"></div>
+                <div class="box-copy">
+                    <strong><br>반려견스타일리스트</strong>
+            <span style="color:#e5e5e5;font-size:17px;">시급 최대 6만원, 워라벨 가능</span><br><br><br>
+                    <a class="intro-link" href="https://korea-license.co.kr/kl-d.html">더 알아보기 ></a>
+                </div>
+        </a>
             </div>
     
         
@@ -169,7 +218,7 @@
 
 
 
-        <!-- <div id="form"></div> -->
+        <div id="form"></div>
 
     </div><!-- contentsWrap end -->
 
@@ -361,7 +410,7 @@
      <script src="js/validation-cl1.js"></script>
      <script src="js/personal.js"></script>
     <script src="js/main.js" charset="euc-kr"></script>
-    <script src="./js/count-result.js" ></script>
+    <script src="./js/count-1.js" ></script>
     <!-- animation script -->
     <!-- <script src="js/wow.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
