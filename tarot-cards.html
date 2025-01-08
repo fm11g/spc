@@ -1094,7 +1094,48 @@ padding-bottom:6px;
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/jquery.simplyscroll.min.js"></script>
 
-   
+    <script>
+       function fvalchk_fun(){
+		var f = document.Ins_from;
+
+		if(!$(":input[name='user_name']").val()){
+			alert("성명을 입력하세요");
+			$("input[name='user_name']").focus();
+			return false;
+		}
+		if(!$(":input[name='나이']").val()){
+			alert("나이를 입력하세요");
+			$("input[name='나이']").focus();
+			return false;
+		}
+
+		if(!$(":input[name='휴대폰번호2']").val()){
+			alert("휴대폰을 입력하세요");
+			$(":input[name='휴대폰번호2']").focus();
+			return false;
+		}
+		if(!$(":input[name='휴대폰번호3']").val()){
+			alert("휴대폰을 입력하세요");
+			$(":input[name='휴대폰번호3']").focus();
+			return false;
+		}
+
+		if(!confirm('신청 접수 하시겠습니까?')) return ;	
+		
+		$("#btn_submit_id").css({ "background-color" : "#999"}).val("전송중입니다. 잠시만 기다려 주세요.");
+        document.getElementById("btn_submit_id").disabled = "disabled";
+
+		//f.target="_top";
+		f.submit();
+	}
+
+
+	function randdom (m,n) {
+		  m = parseInt(m);
+		  n = parseInt(n);
+		  return Math.floor( Math.random() * (n - m + 1) ) + m;
+	}
+        </script>
 
     <script>
         function chk_num(obj){obj.value=obj.value.replace(/[^0-9]/g,'');}
