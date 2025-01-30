@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider with Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 10px;
+        }
+
+        .slide {
+            flex: 0 0 auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .slide img:hover {
+            transform: scale(1.05);
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 1000;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .popup.active {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .popup-header h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .popup-close {
+            cursor: pointer;
+            font-size: 1.2em;
+            border: none;
+            background: none;
+        }
+
+        .popup-content {
+            font-size: 1em;
+            color: #333;
+        }
+
+        @media (max-width: 450px) {
+            .slide {
+                flex: 0 0 66.666%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .slide {
+                flex: 0 0 33.333%;
+            }
+        }
+
+        @media (min-width: 801px) {
+            .slide {
+                flex: 0 0 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slider" id="slider">
+        <div class="slide">
+            <img src="https://via.placeholder.com/800x400" alt="Slide 1" data-popup-content="This is the content for Slide 1">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/800x400/ff7f7f" alt="Slide 2" data-popup-content="This is the content for Slide 2">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/800x400/7f7fff" alt="Slide 3" data-popup-content="This is the content for Slide 3">
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-header">
+        <h3 id="popup-title">Popup Title</h3>
+        <button class="popup-close" id="popup-close">&times;</button>
+    </div>
+    <div class="popup-content" id="popup-content">Popup content goes here.</div>
+</div>
+
+<script>
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slide');
+    const popup = document.getElementById('popup');
+    const popupTitle = document.getElementById('popup-title');
+    const popupContent = document.getElementById('popup-content');
+    const popupClose = document.getElementById('popup-close');
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    function showPopup(title, content) {
+        popupTitle.textContent = title;
+        popupContent.textContent = content;
+        popup.classList.add('active');
+    }
+
+    function closePopup() {
+        popup.classList.remove('active');
+    }
+
+    function goToSlide(index) {
+        slider.style.transform = `translateX(-${index * (100 + 10 / slides.length)}%)`;
+    }
+
+    function autoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            goToSlide(currentIndex);
+        }, 3000);
+    }
+
+    slider.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
+    slider.addEventListener('mouseout', autoSlide);
+
+    slides.forEach((slide, index) => {
+        slide.addEventListener('click', () => {
+            const img = slide.querySelector('img');
+            showPopup(`Slide ${index + 1}`, img.getAttribute('data-popup-content'));
+        });
+    });
+
+    popupClose.addEventListener('click', closePopup);
+
+    autoSlide();
+</script>
+
+</body>
+</html>
