@@ -64,14 +64,14 @@ menu.innerHTML = `
             <div class="menu02"><!-- 메뉴 2depth-->
                 <div class="menu-01">
                     <div class="set-con">
-                        <p><a href="https://korea-license.co.kr">국가자격증</a></p>
+                        <p><a href="https://korea-license.kr">국가자격증</a></p>
                         <ul class="bottom">
-                        <li><p><a target="_self" href="https://korea-license.co.kr/kl-a.html">  <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">손해평가사 <span class="blink menu_event"> 교육비 환급 지원</span><br><span class="menu_ex">[전문직 대우, 정년 없이 연봉 1억 가능]</span></a></p></li>
-                        <li><p><a target="_self" href="https://korea-license.co.kr/kl-b.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">도로교통사고감정사 <span class="blink menu_event"> 교육비 부분 환급</span><br><span class="menu_ex">[대기업 스펙, 초봉 최대 6000만원]</span></a></p></li>
-                        <li><p><a target="_self" href="https://korea-license.co.kr/kl-c.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">농산물품질관리사 <span class="blink menu_event"> 교육비 환급 지원</span><br><span class="menu_ex">[대기업 스펙, 초봉 최대 6000만원]</span></a></p></li>
-                        <li><p><a target="_self" href="https://korea-license.co.kr/kl-d.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">반려견스타일리스트<br><span class="menu_ex">[창업, 프리랜서, 정년 없이 근무 가능]</span></a></p></li>
-                        <!-- <li><p><a target="_self" href="https://korea-license.co.kr/kl-e.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">맞춤형화장품제조관리사<br><span class="menu_ex">[대기업 스펙, 화장품 회사 채용 가산점]</span></a></p></li> -->
-                        <li><p><a target="_self" href="https://korea-license.co.kr/kl-f.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">노인스포츠지도사<br><span class="menu_ex">[창업, 프리랜서, 부업 가능]</span></a></p></li>
+                        <li><p><a target="_self" href="https://korea-license.kr/kl-a.html">  <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">손해평가사 <span class="blink menu_event"> 교육비 환급 지원</span><br><span class="menu_ex">[전문직 대우, 정년 없이 연봉 1억 가능]</span></a></p></li>
+                        <li><p><a target="_self" href="https://korea-license.kr/kl-b.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">도로교통사고감정사 <span class="blink menu_event"> 교육비 부분 환급</span><br><span class="menu_ex">[대기업 스펙, 초봉 최대 6000만원]</span></a></p></li>
+                        <li><p><a target="_self" href="https://korea-license.kr/kl-c.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">농산물품질관리사 <span class="blink menu_event"> 교육비 환급 지원</span><br><span class="menu_ex">[대기업 스펙, 초봉 최대 6000만원]</span></a></p></li>
+                        <li><p><a target="_self" href="https://korea-license.kr/kl-d.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">반려견스타일리스트<br><span class="menu_ex">[창업, 프리랜서, 정년 없이 근무 가능]</span></a></p></li>
+                        <!-- <li><p><a target="_self" href="https://korea-license.kr/kl-e.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">맞춤형화장품제조관리사<br><span class="menu_ex">[대기업 스펙, 화장품 회사 채용 가산점]</span></a></p></li> -->
+                        <li><p><a target="_self" href="https://korea-license.kr/kl-f.html"> <img src="img/favicon.png" style="width:20px;margin-right:4px;margin-bottom:4px;">노인스포츠지도사<br><span class="menu_ex">[창업, 프리랜서, 부업 가능]</span></a></p></li>
                         </ul>
                     </div>
                     <!--<div class="set-con">
